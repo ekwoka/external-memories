@@ -32,6 +32,6 @@
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
     "eleventy-plugin-respimg": "^0.1.2",
-    "lazysizes": "^5.2.2"
+    "eleventy-plugin-lazyimages": "^2.0.1"
   }
 }
