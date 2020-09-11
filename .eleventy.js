@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
         'images/icons/**/*',
       ],
       watch: {
-        src: 'img/**/*', // Glob of images that Eleventy should watch for changes to
+        src: 'images/**/*', // Glob of images that Eleventy should watch for changes to
       },
       pngquant: {
         /* ... */
