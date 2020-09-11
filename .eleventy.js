@@ -5,14 +5,19 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
- 
+const pluginRespimg = require( "eleventy-plugin-respimg" );
+
 
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin( pluginRespimg );
+  
+  eleventyConfig.cloudinaryCloudName = 'dmaoqyvwt';
+  eleventyConfig.srcsetWidths = [ 320, 640, 960, 1280, 1600, 1920, 2240, 2560 ];
+  eleventyConfig.fallbackWidth = 640;
 
   eleventyConfig.setDataDeepMerge(true);
 
