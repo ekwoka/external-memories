@@ -7,12 +7,6 @@ eleventyNavigation:
 
 <h1>Latest 3 Posts</h1>
 
-{% respimg
-    "https://www.thekwoka.net/img/desktop-new.png",
-    "banner",
-    "100vw"
-%}
-
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
