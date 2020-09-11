@@ -1,6 +1,6 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
+  "title": "External Memories",
+  "url": "https://thekwoka.net/",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
@@ -10,11 +10,11 @@
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://thekwoka.net/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "Eric Kwoka",
+    "email": "eric@teapaz.com",
+    "url": "thekwoka.net/about-me/"
   }
 }
