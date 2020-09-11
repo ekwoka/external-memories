@@ -1,0 +1,3 @@
+Type: #collection
+
+# [[Product Messaging]]
