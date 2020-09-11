@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginLocalRespimg, {
     folders: {
-      source: 'src', // Folder images are stored in
+      source: 'img', // Folder images are stored in
       output: 'public', // Folder images should be output to
     },
     images: {
@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
         'images/icons/**/*',
       ],
       watch: {
-        src: 'images/**/*', // Glob of images that Eleventy should watch for changes to
+        src: 'img/**/*', // Glob of images that Eleventy should watch for changes to
       },
       pngquant: {
         /* ... */
