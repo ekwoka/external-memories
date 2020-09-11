@@ -112,7 +112,7 @@ module.exports = function(eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
     // pathPrefix: "/",
 
-    markdownTemplateEngine: "liquid","md"
+    markdownTemplateEngine: "liquid","md",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
