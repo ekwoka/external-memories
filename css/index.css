@@ -169,6 +169,8 @@ pre {
 }
 .postlist-date {
   word-spacing: -0.5px;
+  padding-left: 2rem;
+  margin-bottom: .75rem;
 }
 .postlist-link {
   display: inline-block;
