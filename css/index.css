@@ -229,29 +229,33 @@ a[href].direct-link:focus:visited,
 }
 
 /* Dark Mode */
-body {
-	color: var(--white);
-	background-color: var(--darkgray);
-}
 
-p,
-.tmpl-post li {
-  line-height: 1.5;
-}
-
-a[href] {
-  color: var(--lightgray);
-}
-a[href]:visited {
-  color: var(--gray);
-}
-
-.postlist-date,
-.postlist-item:before {
-  color: var(--white);
-}
-
-a[href].post-tag,
-a[href].post-tag:visited {
-  color: var(--white);
+@media (prefers-color-scheme: dark) {
+	body {
+		color: var(--white);
+		background-color: var(--darkgray);
+	}
+		
+	p,
+	.tmpl-post li {
+		line-height: 1.5;
+	}
+		
+	a[href] {
+		color: var(--lightgray);
+	}
+	
+	a[href]:visited {
+		color: var(--gray);
+	}
+	
+	.postlist-date,
+	.postlist-item:before {
+		color: var(--white);
+	}
+	
+	a[href].post-tag,
+	a[href].post-tag:visited {
+		color: var(--white);
+	}
 }
