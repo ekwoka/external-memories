@@ -7,16 +7,22 @@ function rainbowStop(h)
   return ( rgb2hex(f(0), f(8), f(4)) );
 } 
   
-</script>
-  <style>
+document.write(
+  '<style>');
+  
   {% for tag in collections.tagList %}
-    <!-- {{ tag }} -->
+document.write(
+'<!-- {{ tag }} -->
 	.{{ tag | replace(" ","") }} {
 	background-color:${rainbowStop(Math.random())};
-	};
+	};'
+	);
 	
   {% endfor %}
-  </style>
+  document.write('</style>');
+  
+  
+  </script>
   
 
 
