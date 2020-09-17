@@ -8,13 +8,13 @@ function rainbowStop(h)
 }; 
   
 function rainbowTags(stops) {
-	var s = "<style>";
+	var s = "<style>\n";
 	var i = 0;
 	{% for tag in collections.tagList %}
 	var c = i / stops; 
-	s += "." + "{{ tag |replace(" ","") }}" + " {background-color:" + rainbowStop(c, 1, 0.5) + ";};";
+	s += "." + "{{ tag |replace(" ","") }}" + " {background-color:" + rainbowStop(c, 1, 0.5) + ";} \n";
 	i++;
-	{% endfor %} 
+	{% endfor %}
 	s += "</style>"; 
 	document.write(s);
 };
