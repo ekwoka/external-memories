@@ -3,7 +3,7 @@
   --darkred: #7F0036;
   --lightgray: #e0e0e0;
   --gray: #C0C0C0;
-  --darkgray: #333;
+  --darkgray: #292929;
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
@@ -17,8 +17,8 @@ body {
   margin: auto;
   max-width: 1000px;
   font-family: system-ui, sans-serif;
-  color: var(--darkgray);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--darkgray);
 }
 p:last-child {
   margin-bottom: 0;
@@ -30,13 +30,13 @@ img {
 }
 p,
 .tmpl-post li {
-  line-height: 1.45;
+  line-height: 1.5;
 }
 a[href] {
-  color: var(--blue);
+  color: var(--lightgray);
 }
 a[href]:visited {
-  color: var(--navy);
+  color: var(--gray);
 }
 main {
   padding: 1rem;
