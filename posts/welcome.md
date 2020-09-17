@@ -8,8 +8,6 @@ tags:
   - note-taking
 layout: layouts/post.njk
 ---
-
-# Welcome to My External Memories
 Something I've generally been struggling with for most of my life, but even more so recently with the massive increases in complexity my life has undergone in terms of work and life-long learning, is how to properly manage my information.
 
 I've almost always relied almost entirely on my brain to organize and recall information or, at a minimum, where to find that information again. I've never been one for taking any serious notes. Even in the points in life where I tried to do notes, I would take notes, but never have a meaningful reason to refer to them.
