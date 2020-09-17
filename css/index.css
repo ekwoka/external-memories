@@ -1,4 +1,5 @@
 :root {
+	color-scheme: dark light;
   --red: #C5004A;
   --darkred: #7F0036;
   --lightgray: #e0e0e0;
@@ -7,6 +8,7 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+  --black: #000;
 }
 * {
   box-sizing: border-box;
@@ -17,8 +19,8 @@ body {
   margin: auto;
   max-width: 1000px;
   font-family: system-ui, sans-serif;
-  color: var(--white);
-  background-color: var(--darkgray);
+  color: var(--black);
+  background-color: var(--white);
 }
 p:last-child {
   margin-bottom: 0;
@@ -30,13 +32,13 @@ img {
 }
 p,
 .tmpl-post li {
-  line-height: 1.5;
+  line-height: 1.25;
 }
 a[href] {
-  color: var(--lightgray);
+  color: var(--blue);
 }
 a[href]:visited {
-  color: var(--gray);
+  color: var(--navy);
 }
 main {
   padding: 1rem;
@@ -163,7 +165,7 @@ pre {
 .postlist-date,
 .postlist-item:before {
   font-size: 1em; /* 13px /16 */
-  color: var(--white);
+  color: var(--darkgray);
 }
 .postlist-date {
   word-spacing: -0.5px;
@@ -196,7 +198,7 @@ pre {
 }
 a[href].post-tag,
 a[href].post-tag:visited {
-  color: #fff;
+  color: var(--black);
 }
 
 /* Warning */
@@ -224,4 +226,32 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+/* Dark Mode */
+body {
+	color: var(--white);
+	background-color: var(--darkgray);
+}
+
+p,
+.tmpl-post li {
+  line-height: 1.5;
+}
+
+a[href] {
+  color: var(--lightgray);
+}
+a[href]:visited {
+  color: var(--gray);
+}
+
+.postlist-date,
+.postlist-item:before {
+  color: var(--white);
+}
+
+a[href].post-tag,
+a[href].post-tag:visited {
+  color: var(--white);
 }
