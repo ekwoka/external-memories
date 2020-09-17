@@ -7,4 +7,6 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+Hi, I'm Eric Kwoka. I work as a Revenue Optimization Expert at [Build Grow Scale](https://buildgrowscale.com).
+
+I'm rather addicted to the idea of life-long learning. I am a sponge for new information.
