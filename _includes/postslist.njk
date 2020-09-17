@@ -1,4 +1,32 @@
 <ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<script>
+function rainbowStop(h) 
+{
+  let f= (n,k=(n+h*12)%12) => .5-.5*Math.max(Math.min(k-3,9-k,1),-1);  
+  let rgb2hex = (r,g,b) => "#"+[r,g,b].map(x=>Math.round(x*255).toString(16).padStart(2,0)).join('');
+  return ( rgb2hex(f(0), f(8), f(4)) );
+} 
+
+document.write(
+'<style>'
+{% for tag in collections.tagList %}
+document.write(
+'.{{ tag | replace(" ","") }} {
+background-color:${rainbowStop(Math.random())};
+};
+')
+{% endfor %}
+document.write(
+'</style>'
+  
+</script>
+  
+  
+
+
+
+
+
 {% for post in postslist | reverse %}
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>

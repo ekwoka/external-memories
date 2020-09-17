@@ -27,7 +27,16 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.cloudinaryCloudName = 'dmaoqyvwt';
   eleventyConfig.srcsetWidths = [ 320, 640, 960, 1280, 1600, 1920, 2240, 2560 ];
   eleventyConfig.fallbackWidth = 640;
-
+  eleventyConfig.addCollection("tagList", collection => {
+    const tagsSet = new Set();
+    collection.getAll().forEach(item => {
+      if (!item.data.tags) return;
+      item.data.tags
+        .filter(tag => !['post', 'all'].includes(tag))
+        .forEach(tag => tagsSet.add(tag));
+    });
+    return Array.from(tagsSet).sort();
+  });
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
