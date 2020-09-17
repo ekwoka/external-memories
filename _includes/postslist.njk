@@ -7,21 +7,22 @@ function rainbowStop(h)
   return ( rgb2hex(f(0), f(8), f(4)) );
 } 
   
-document.write(
-  '<style>');
-  
+function rainbowTags(stops) {
+  var s = "<style>";
+  var i = 0;
   {% for tag in collections.tagList %}
-document.write(
-'<!-- {{ tag }} -->
-	.{{ tag | replace(" ","") }} {
-	background-color:${rainbowStop(Math.random())};
-	};'
-	);
-	
+
+var c = i / stops;
+    s += "." + {{ tag |replace(" ","") }} + " {background-color:" + rainbowStop(c, 1, 0.5) + ";};";
+i++;
+
   {% endfor %}
-  document.write('</style>');
+  s += "</style>";
+  document.write(s);
+};
   
   
+  rainbowTags({% collections.tagList.length %});
   </script>
   
 
