@@ -12,7 +12,7 @@ function rainbowTags(stops) {
 	var i = 0;
 	{% for tag in collections.tagList %}
 	var c = i / stops; 
-	s += "." + "{{ tag |replace(" ","") }}" + " {background-color:" + rainbowStop(c, 1, 0.5) + ";} \n";
+	s += "." + "{{ tag |replace(" ","") }}" + " {background-color:" + rainbowStop(c, .75, 0.25) + "81;} \n";
 	i++;
 	{% endfor %}
 	s += "</style>"; 
