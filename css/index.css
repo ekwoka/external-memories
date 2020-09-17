@@ -231,6 +231,7 @@ a[href].direct-link:focus:visited,
 /* Dark Mode */
 
 @media (prefers-color-scheme: dark) {
+	html,
 	body {
 		color: var(--white);
 		background-color: var(--darkgray);
