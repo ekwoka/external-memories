@@ -6,21 +6,12 @@ function rainbowStop(h)
   let rgb2hex = (r,g,b) => "#"+[r,g,b].map(x=>Math.round(x*255).toString(16).padStart(2,0)).join('');
   return ( rgb2hex(f(0), f(8), f(4)) );
 } 
-
-document.write(
-'<style>'
-{% for tag in collections.tagList %}
-document.write(
-'.{{ tag | replace(" ","") }} {
-background-color:${rainbowStop(Math.random())};
-};
-')
-{% endfor %}
-document.write(
-'</style>'
   
 </script>
   
+  {% for tag in collections.tagList %}
+    <!-- {{ tag }} -->
+  {% endfor %}
   
 
 
