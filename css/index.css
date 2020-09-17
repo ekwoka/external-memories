@@ -47,7 +47,7 @@ main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  border-bottom: 1px dashed var(--gray);
 }
 header:after {
   content: "";
@@ -258,5 +258,9 @@ a[href].direct-link:focus:visited,
 	a[href].post-tag,
 	a[href].post-tag:visited {
 		color: var(--white);
+	}
+	
+	header {
+		border-bottom: 1px dashed var(--lightgray);
 	}
 }
