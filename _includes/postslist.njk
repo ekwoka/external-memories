@@ -8,10 +8,15 @@ function rainbowStop(h)
 } 
   
 </script>
-  
+  <style>
   {% for tag in collections.tagList %}
     <!-- {{ tag }} -->
+	.{{ tag | replace(" ","") }} {
+	background-color:${rainbowStop(Math.random())};
+	};
+	
   {% endfor %}
+  </style>
   
 
 
