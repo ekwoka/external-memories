@@ -21,7 +21,7 @@ module.exports = function(eleventyConfig) {
         return `${fetchBase}q_auto,f_auto,w_${w}/${path} ${w}w`;
       }).join(', ');
 
-      return `<img src="${src}" srcset="${srcset}" sizes="${sizes ? sizes : '100vw'}" alt="${alt ? alt : ''}" max-width="100%">`;
+      return `<img data-src="${src}" data-srcset="${srcset}" data-sizes="auto" alt="${alt ? alt : ''}" max-width="100%">`;
     });
   
   eleventyConfig.cloudinaryCloudName = 'dmaoqyvwt';
