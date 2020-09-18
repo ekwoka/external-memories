@@ -82,7 +82,7 @@ module.exports = function(eleventyConfig) {
     return [...tagSet];
   });
   
-  eleventyConfig.addCollection("wiki", fucntion(collection) {
+  eleventyConfig.addCollection("wiki", collection => {
     return collection.getFilteredByTag("post").sort((a, b) => Math.random() - 0.5);
   });
 
