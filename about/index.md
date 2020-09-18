@@ -4,7 +4,7 @@ title: About Me
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me
-  order: 4
+  order: 3
 ---
 
 Hi, I'm Eric Kwoka. I work as a Revenue Optimization Expert at [Build Grow Scale](https://buildgrowscale.com).

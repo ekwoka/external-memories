@@ -62,7 +62,6 @@ module.exports = function(eleventyConfig) {
             case "nav":
             case "post":
             case "posts":
-			case "wiki":
               return false;
           }
 
@@ -74,12 +73,6 @@ module.exports = function(eleventyConfig) {
         }
       }
     });
-	
-	// add a collection for the wiki
-	
-	eleventyConfig.addCollection("wiki", collection => {
-    return collection.getFilteredByTag("wiki").sort((a, b) => Math.random() - 0.5);
-  });
 
     // returning an array in addCollection works in Eleventy 0.5.3
     return [...tagSet];
