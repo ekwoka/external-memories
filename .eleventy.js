@@ -77,6 +77,12 @@ module.exports = function(eleventyConfig) {
     // returning an array in addCollection works in Eleventy 0.5.3
     return [...tagSet];
   });
+  
+  // make random wiki collection
+  
+  eleventyConfig.addCollection("wiki", collection => {
+    return collection.getFilteredByTag("wiki").sort((a, b) => Math.random() - 0.5);
+  });
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
