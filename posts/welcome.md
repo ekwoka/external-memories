@@ -6,7 +6,6 @@ tags:
   - zettelkasten
   - revenue optimization
   - note-taking
-  - wiki
 layout: layouts/post.njk
 ---
 Something I've generally been struggling with for most of my life, but even more so recently with the massive increases in complexity my life has undergone in terms of work and life-long learning, is how to properly manage my information.
