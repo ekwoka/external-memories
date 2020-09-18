@@ -2,11 +2,11 @@
 layout: layouts/home.njk
 permalink: /posts/
 eleventyNavigation:
-  key: Blog
-  order: 3
+  key: Wiki
+  order: 2
 ---
 
-<h1>Blog Archive</h1>
+<h1>Random Wiki Articles</h1>
 
-{% set postslist = collections.posts %}
+{% set postslist = collections.wiki %}
 {% include "postslist.njk" %}
