@@ -77,12 +77,13 @@ module.exports = function(eleventyConfig) {
 	
 	// add a collection for the wiki
 	
-	eleventyConfig.addCollection("wiki", collection => {
-    return collection.getFilteredByTag("post").sort((a, b) => Math.random() - 0.5);
-  });
 
     // returning an array in addCollection works in Eleventy 0.5.3
     return [...tagSet];
+  });
+  
+  eleventyConfig.addCollection("wiki", collection => {
+    return collection.getFilteredByTag("post").sort((a, b) => Math.random() - 0.5);
   });
 
   eleventyConfig.addPassthroughCopy("img");
