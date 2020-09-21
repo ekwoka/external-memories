@@ -31,6 +31,6 @@ With getting more reviews not entirely up to my own abilities, I think creating 
 So, as we develop our Unique Value Proposition icons to put below the ATC, I think we will add one for a money back guarantee.
 
 Like so:
-<object type="image/svg+xml" data="/img/matcha-uvp.svg" style>
+<object type="image/svg+xml" data="/img/matcha-uvp.svg" style></object>
 
 Hopefully this will get some matcha moving.
