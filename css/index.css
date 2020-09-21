@@ -230,6 +230,12 @@ a[href].direct-link:focus:visited,
   color: #aaa;
 }
 
+.svg-background {
+	background-color: var(--white);
+	padding: 1rem;
+	max-width: 100%;
+}
+
 /* Dark Mode */
 
 @media (prefers-color-scheme: dark) {
@@ -266,12 +272,6 @@ a[href].direct-link:focus:visited,
 		border-bottom: 1px dashed var(--lightgray);
 	}
 	.svg-background {
-		background-color: var(--lightgray);
+		background-color: var(--gray);
 	}
-}
-
-.svg-background {
-	background-color: var(--white);
-	padding: 1rem;
-	max-width: 100%;
 }
