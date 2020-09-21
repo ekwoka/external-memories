@@ -266,11 +266,12 @@ a[href].direct-link:focus:visited,
 		border-bottom: 1px dashed var(--lightgray);
 	}
 	.svg-background {
-		background-color: --lightgray;
+		background-color: var(--lightgray);
 	}
 }
 
 .svg-background {
-	background-color: --white;
+	background-color: var(--white);
 	padding: 1rem;
+	max-width: 100%;
 }
