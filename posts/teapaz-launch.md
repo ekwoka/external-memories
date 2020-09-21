@@ -3,9 +3,9 @@ title: Troubles Launching Teapaz
 description: 
 date: 2020-09-21
 tags:
-  - Teapaz
-  - Facebook Ads
-  - Google Ads
+  - teapaz
+  - facebook ads
+  - google ads
 layout: layouts/post.njk
 ---
 So, at the beginning of August we were able to finally soft launch our Matcha brand [Teapaz](https://teapaz.com) and after a few weeks waiting for product photography, we started running proper ads last week.
@@ -31,6 +31,6 @@ With getting more reviews not entirely up to my own abilities, I think creating 
 So, as we develop our Unique Value Proposition icons to put below the ATC, I think we will add one for a money back guarantee.
 
 Like so:
-<object type="image/svg+xml" data="/img/matcha-uvp.svg" style="background-color: white; padding: 1rem; max-width: 100%;"></object>
+<object class="svg-background" type="image/svg+xml" data="/img/matcha-uvp.svg" style="background-color: white; padding: 1rem; max-width: 100%;"></object>
 
 Hopefully this will get some matcha moving.

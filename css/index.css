@@ -265,4 +265,12 @@ a[href].direct-link:focus:visited,
 	header {
 		border-bottom: 1px dashed var(--lightgray);
 	}
+	.svg-background {
+		background-color: --lightgray;
+	}
+}
+
+.svg-background {
+	background-color: --white;
+	padding: 1rem;
 }
