@@ -26,6 +26,10 @@ There are some skills that are necessary to be successful in this field.
 
 - Ability to learn fast
 - Procedural mindset
-- 
+- Willingness to be wrong
+
+All other skills are pretty easily transferable but these are much harder.
+
+
 
 ## The Basic RO Process
