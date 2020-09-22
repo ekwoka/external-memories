@@ -97,7 +97,10 @@ module.exports = function(eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
-  }).use(wikilinks, { baseURL: '/wiki/', suffix: '/' });
+  }).use(wikilinks, { 
+  baseURL: "/wiki/", 
+  suffix: "/" 
+  });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
