@@ -6,7 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const pluginRespimg = require( "eleventy-plugin-respimg" );
-
+const wikilinks = require('@tomleesm/markdown-it-wikilinks');
 
 
 module.exports = function(eleventyConfig) {
@@ -97,7 +97,7 @@ module.exports = function(eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
-  });
+  }).use(wikilinks, { baseURL: '/wiki/', suffix: '/' });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
