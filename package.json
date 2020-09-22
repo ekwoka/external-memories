@@ -23,6 +23,9 @@
     "url": "https://github.com/11ty/eleventy-base-blog/issues"
   },
   "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "dependencies": {
+	"lazysizes": "^5.2.2"
+  }
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.6",
@@ -32,7 +35,6 @@
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
     "eleventy-plugin-respimg": "^0.1.2",
-    "lazysizes": "^5.2.2",
 	"@tomleesm/markdown-it-wikilinks": "^1.1.1"
   }
 }
