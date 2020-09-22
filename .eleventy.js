@@ -93,13 +93,13 @@ module.exports = function(eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true
+  }).use(wikilinks, { 
+    baseURL: "/wiki/", 
+    suffix: "/" 
   }).use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
-  }).use(wikilinks, { 
-    baseURL: "/wiki/", 
-    suffix: "/" 
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
