@@ -8,6 +8,9 @@ layout: layouts/post.njk
 ---
 
 ## Design
+
+<img src="https://cdn11.bigcommerce.com/s-uiywfsyvbe/images/stencil/1280x1280/products/380/3222/leather-briefcase-dark-brown-laptop-bag-gladstone-saddleback-top__86147.1603369174.jpg?c=1" width="50%">
+
 This leather laptop bag is over-engineered with no breakable parts like magnets, zippers, snaps, buttons, etc. Just a few pieces of strong leather put together in a good looking way. And is reinforced at all stress points with rivets and hidden polyester strapping. Leather that is pulled on, stretches, but these straps don't. The leather briefcase is built with the largest pieces of leather possible so there are fewer seams, and we sew at only 5 stitches per inch so there's more leather between the needle holes and fewer holes to start a tear. The closure is a classic Gladstone bag closure which does not require a zipper. Zippers break. Our lining that backs up the leather is tougher than the leather which is better than some pretty shiny lightweight nylon fabric with an old world map on it to make you feel adventurous.  
 
 - No breakable parts (margnets, zippers, snaps)
@@ -16,6 +19,7 @@ This leather laptop bag is over-engineered with no breakable parts like magnets,
 - Fewer Seams, Fewer Holes
 
 ## Materials
+<img src="https://cdn11.bigcommerce.com/s-uiywfsyvbe/images/stencil/1280x1280/products/380/3238/leather-briefcase-tan-brown-laptop-bag-gladstone-saddleback-close__84073.1603370087.jpg?c=1"  width="50%">
 ### Leather
 Our leather is the strongest we can find (full-grain boot leather, but thicker). It's important to understand this. The top layer of a leather hide has all of the grain in it. The grain is the toughest, most protective and longest lasting part of the hide. The grain is like the shingles on a roof. The best part. Most companies shave off the top layer (grain) of the hide to get rid of scars so they can use almost every inch of the hide in production and therefore save money. But in doing so, it's like they're shaving the shingles off of your roof. There ought to be a law.
 
