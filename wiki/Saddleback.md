@@ -20,6 +20,7 @@ This leather laptop bag is over-engineered with no breakable parts like magnets,
 
 ## Materials
 <img src="https://cdn11.bigcommerce.com/s-uiywfsyvbe/images/stencil/1280x1280/products/380/3238/leather-briefcase-tan-brown-laptop-bag-gladstone-saddleback-close__84073.1603370087.jpg?c=1"  width="50%">
+
 ### Leather
 Our leather is the strongest we can find (full-grain boot leather, but thicker). It's important to understand this. The top layer of a leather hide has all of the grain in it. The grain is the toughest, most protective and longest lasting part of the hide. The grain is like the shingles on a roof. The best part. Most companies shave off the top layer (grain) of the hide to get rid of scars so they can use almost every inch of the hide in production and therefore save money. But in doing so, it's like they're shaving the shingles off of your roof. There ought to be a law.
 
