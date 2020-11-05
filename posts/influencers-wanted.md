@@ -3,8 +3,8 @@ title: Influencers Wanted
 description: Teapaz is having issues making sales. We turn to Influencer Marketing for the answers.
 date: 2020-10-17
 tags:
-  - marketing
   - influencers
+  - marketing
   - instagram
 layout: layouts/post.njk
 ---
