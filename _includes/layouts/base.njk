@@ -7,10 +7,10 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
+    <noscript><link rel="stylesheet" href="{{ '/css/noscript.css' | url }}" /></noscript>
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
-		<noscript><link rel="stylesheet" href="{{ '/css/noscript.css' | url }}" /></noscript>
 
     <!-- Scripts -->
     <script type="text/javascript" src="{{ '/static/js/jquery.min.js' | url }}" defer></script>
@@ -29,7 +29,7 @@
 			<!-- Intro -->
 			<div id="intro">
 				<h1>This is<br />
-					Massively</h1>
+					External Memories</h1>
 				<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
 					and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
 				<ul class="actions">
@@ -60,13 +60,5 @@
 
     <!-- Current page: {{ page.url | url }} -->
     </div>
-    <!-- Scripts -->
-    <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
-		<script type="text/javascript" src="/static/js/jquery.scrollex.min.js" defer></script>
-		<script type="text/javascript" src="/static/js/jquery.scrolly.min.js" defer></script>
-		<script type="text/javascript" src="/static/js/browser.min.js" defer></script>
-		<script type="text/javascript" src="/static/js/breakpoints.min.js" defer></script>
-		<script type="text/javascript" src="/static/js/util.js" defer></script>
-		<script type="text/javascript" src="/static/js/main.js" defer></script>
   </body>
 </html>
