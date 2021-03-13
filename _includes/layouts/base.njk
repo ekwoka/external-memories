@@ -46,7 +46,7 @@
 					<nav id="nav">
 						<ul class="links">
               {%- for entry in collections.all | eleventyNavigation %}
-                <li {%- if entry.url == page.url -%}class="active"{%- endif -%}><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+                <li {%- if entry.url == page.url %} class="active"{%- endif -%}><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
               {%- endfor %}
 							<li class="active"><a href="index.html">This is Massively</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
