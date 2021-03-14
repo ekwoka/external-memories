@@ -1,7 +1,7 @@
 ---
-title: Slow Pages are Costing Your Money (Give Back Your Customer's Time)
+title: Slow Pages are Costing You Money (Give Back Your Customer's Time)
 description: Speeding up your store's page speed is the surest way to improve conversions, but most people don't know the first place to start with diagnosing the problems.
-date: 2021-02-25
+date: 2021-03-13
 tags:
   - Shopify
   - Developer
