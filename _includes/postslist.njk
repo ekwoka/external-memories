@@ -7,6 +7,17 @@
 				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 				<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
 			</header>
+      <!-- Tags -->
+      {%- if post.data.tags -%}
+        <p>
+          {%- for tag in post.data.tags -%}
+            {%- if collections.tagList.indexOf(tag) != -1 -%}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </p>
+      {%- endif -
 			{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image main"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}" /></a>{%- endif -%}
 			<ul class="actions special">
 				<li><a href="{{ post.url | url }}" class="button large">Full Story</a></li>
@@ -22,6 +33,7 @@
 			  		<span class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 			  		<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 			  	</header>
+          <!-- Tags -->
           {%- if post.data.tags -%}
             <p>
               {%- for tag in post.data.tags -%}
