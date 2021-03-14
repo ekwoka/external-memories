@@ -31,6 +31,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
+
+
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
@@ -62,7 +64,7 @@ module.exports = function(eleventyConfig) {
             case "nav":
             case "post":
             case "posts":
-			case "wiki":
+			      case "wiki":
               return false;
           }
 
@@ -85,6 +87,10 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByTag("wiki").sort((a, b) => Math.random() - 0.5);
   });
 
+  // Add Tailwind Output CSS as Watch Target
+  eleventyConfig.addWatchTarget("./_tmp/css/style.css");
+
+  eleventyConfig.addPassthroughCopy("./_tmp/css/style.css": "./css/style.css");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("static");
