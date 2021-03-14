@@ -23,10 +23,11 @@
     "url": "https://github.com/11ty/eleventy-base-blog/issues"
   },
   "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+
   "dependencies": {
-	"lazysizes": "^5.2.2",
-  "postcss": "^8.2.1",
-  "autoprefixer": "^10.1.0"
+	  "lazysizes": "^5.2.2",
+    "postcss": "^8.2.1",
+    "autoprefixer": "^10.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
