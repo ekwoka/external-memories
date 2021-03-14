@@ -1,33 +1,21 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-<script>
-function rainbowStop(h) 
-{
-  let f= (n,k=(n+h*12)%12) => .5-.5*Math.max(Math.min(k-3,9-k,1),-1);  
-  let rgb2hex = (r,g,b) => "#"+[r,g,b].map(x=>Math.round(x*255).toString(16).padStart(2,0)).join('');
-  return ( rgb2hex(f(0), f(8), f(4)) );
-}; 
-  
-function rainbowTags(stops) {
-	var s = "<style>\n";
-	var i = 0;
-	{% for tag in collections.tagList %}
-	var c = i / stops; 
-	s += "." + "{{ tag |replace(" ","") }}" + " {background-color:" + rainbowStop(c, .75, 0.25) + "81;} \n";
-	i++;
-	{% endfor %}
-	s += "</style>"; 
-	document.write(s);
-};
-  
-rainbowTags({{ collections.tagList.length }});
-  </script>
-  
-
-
-
-
-
 {% for post in postslist | reverse %}
+  {%- if loop.first -%}
+    <!-- Featured Post -->
+		<article class="post featured">
+			<header class="major">
+				<span class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+				<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
+			</header>
+			{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image main"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}" /></a>{%- endif -%}
+			<ul class="actions special">
+				<li><a href="{{ post.url | url }}" class="button large">Full Story</a></li>
+			</ul>
+		</article>
+  {%- endif -%}
+
+
+
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a><br>
     <div class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</div>
