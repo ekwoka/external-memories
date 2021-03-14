@@ -8,7 +8,7 @@
     "build:html": "eleventy",
     "watch": "npm-run-all --parallel watch:css watch:html",
     "watch:css": "postcss css/tailwind.css -o ./_tmp/css/style.css --watch",
-    "watch:html": "eleventy --serve --port=8182"
+    "watch:html": "eleventy --serve"
   },
   "repository": {
     "type": "git",
