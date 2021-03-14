@@ -63,11 +63,7 @@
 
       <!-- Main -->
 			<div id="main">
-
-
-        <main {%- if templateClass -%} class="{{ templateClass }}" {%- endif -%} >
-          {{ content | safe }}
-        </main>
+        {{ content | safe }}
       </div>
 
 
