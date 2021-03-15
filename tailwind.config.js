@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enable: false,
+    enable: true,
     mode: "all",
     content: ["./**/*.njk"],
     options: {
