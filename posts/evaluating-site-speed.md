@@ -1,7 +1,7 @@
 ---
-title: Slow Pages are Costing You Money (Give Back Your Customer's Time) Part 1
-description: Speeding up your store's page speed is the surest way to improve conversions, but most people don't know the first place to start with diagnosing the problems.
-date: 2021-03-15
+title: Evaluating Pagespeed on Shopify
+description: Slow pages are costing you money! We'll go over benchmarking your page speed, the first step to giving back your customers' time!
+date: 2021-03-20
 tags:
   - Shopify
   - Developer
