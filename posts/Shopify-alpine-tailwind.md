@@ -1,5 +1,5 @@
 ---
-title: Building a Shopify Theme on Alpinejs and TailwindCSS
+title: Getting Started with Alpinejs and TailwindCSS
 description: A bright new future looks of powerful and responsive Shopify stores. It will just take some learning to get working.
 date: 2021-03-16
 tags:
@@ -12,7 +12,7 @@ Not being a web developer myself, I'm rarely in the loop in regards to new techn
 
 Of course, my javascript is also very rusty, and it wasn't very functional to begin with.
 
-But recently I've been very excited to learn about TailwindCSS and Alpinejs.
+But recently I've been very excited to learn about [TailwindCSS](https://tailwindcss.com/) and [AlpineJS](https://github.com/alpinejs/alpine).
 
 ## Utility First
 At their core, Tailwind and Alpine exist to expand the function of your markup, as opposed to put convoluted layers in the background. TailwindCSS calls this "utility-first css", where the bulk of common styling is handled via highly reusable utility classes, as opposed to the more classical sementic classes.
@@ -37,7 +37,7 @@ This means no running all around trying to figure out why X thing behaves in Y w
 ## A New Era for Shopify Themes
 I've already been toying with the idea of creating my own Shopify Theme, and this just really gives me the ammo to offer something meaningfully different. This falls right into my current seasonal theme, the Spring of Creation.
 
-With that in mind, I've been messing about with Tailwind and Alpine on codepen to see how I might handle a dynamic collections page with filters.
+With that in mind, I've been messing about with Tailwind and Alpine on [codepen](https://codepen.io/ekwoka/pen/VwmRJXP) to see how I might handle a dynamic collections page with filters.
 
 The biggest issue is just Shopify not making it easy to access a lot of products through JSON, but there are some ways around it.
 
