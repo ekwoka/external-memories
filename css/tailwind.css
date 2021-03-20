@@ -13,7 +13,7 @@ h3 {
 }
 
 .clamp-main {
-  width: clamp(70vw, calc(13rem + 50vw), 95vw);
+  width: clamp(70vw, calc(13rem + 50vw), 98vw);
 }
 
 /* Syntax Highlighting*/
