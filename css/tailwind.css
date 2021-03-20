@@ -18,15 +18,15 @@ h3 {
 
 
 .text-hr::before, .text-hr::after {
-  @apply border-t-2 border-gray-200 absolute top-1/2
+  @apply border-t-2 border-gray-200 absolute top-1/2;
 }
 
 .text-hr::before {
-  @apply left-0
+  @apply left-0;
 }
 
 .text-hr::after {
-  @apply right-0
+  @apply right-0;
 }
 
 /* Syntax Highlighting*/
