@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+
+    <!-- AlpineJS -->
+    <script type="text/javascript" src="{{ '/static/js/alpine.js' | url }}" defer></script>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}"/>
+
+    <!-- Feeds -->
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    <!-- Legacy CSS -->
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
     <noscript><link rel="stylesheet" href="{{ '/css/noscript.css' | url }}" /></noscript>
 
-    <!-- Scripts -->
+    <!-- Legacy Scripts -->
     <script type="text/javascript" src="{{ '/static/js/jquery.min.js' | url }}" defer></script>
 		<script type="text/javascript" src="{{ '/static/js/jquery.scrollex.min.js' | url }}" defer></script>
 		<script type="text/javascript" src="{{ '/static/js/jquery.scrolly.min.js' | url }}" defer></script>
@@ -20,13 +30,12 @@
 		<script type="text/javascript" src="{{ '/static/js/breakpoints.min.js' | url }}" defer></script>
 		<script type="text/javascript" src="{{ '/static/js/util.js' | url }}" defer></script>
 		<script type="text/javascript" src="{{ '/static/js/main.js' | url }}" defer></script>
-    <script type="text/javascript" src="{{ '/static/js/alpine.js' | url }}" defer></script>
 
+    <!-- AlpineJS -->
+    <script type="text/javascript" src="{{ '/static/js/alpine.js' | url }}" defer></script>
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}"/>
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ '/css/tailwind.css' | url }}"/>
   </head>
   <body class="is-preload">
 
