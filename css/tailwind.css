@@ -19,6 +19,7 @@ h3 {
 
 .text-hr::before, .text-hr::after {
   content: '';
+  width: calc(50%-6rem);
   @apply border-t-2 border-gray-200 absolute top-1/2;
 }
 
