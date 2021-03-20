@@ -3,7 +3,7 @@
     <!-- Featured Post -->
 		<article class="post featured">
 			<header class="major">
-				<span class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+				<span class="text-hr block relative" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
         <!-- Tags -->
         {%- if post.data.tags -%}

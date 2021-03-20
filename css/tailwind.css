@@ -16,6 +16,19 @@ h3 {
   width: clamp(70vw, calc(13rem + 50vw), 98vw);
 }
 
+
+.text-hr::before, .text-hr::after {
+  @apply border-t-2 border-gray-200 absolute top-1/2
+}
+
+.text-hr::before {
+  @apply left-0
+}
+
+.text-hr::after {
+  @apply right-0
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
