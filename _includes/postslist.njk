@@ -19,9 +19,7 @@
 				<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
 			</header>
 			{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image main"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}"/></a>{%- endif -%}
-			<ul class="actions special">
-				<li><a href="{{ post.url | url }}" class="button large">Full Story</a></li>
-			</ul>
+				<a href="{{ post.url | url }}" class="border-2 border-black text-center max-w-1/2 min-w-max px-8 py-4">Full Story</a></li>
 		</article>
   {%- else -%}
     {%- if loop.index == 2 -%}
