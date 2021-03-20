@@ -12,6 +12,10 @@ h3 {
   @apply text-2xl font-bold mb-3;
 }
 
+.clamp-main {
+  width: clamp(70vw, calc(13rem + 50vw), 95vw);
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
