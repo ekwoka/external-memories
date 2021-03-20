@@ -3,7 +3,7 @@
     <!-- Featured Post -->
 		<article class="">
 			<header class="prose">
-				<span class="text-hr block relative" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+				<span class="text-hr block relative text-center" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
         <!-- Tags -->
         {%- if post.data.tags -%}
@@ -19,8 +19,8 @@
 				<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
 			</header>
 			{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image main"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}"/></a>{%- endif -%}
-      <p class="text-center">
-				<a href="{{ post.url | url }}" class="border-solid border-2 border-black text-center max-w-1/2 min-w-max px-8 py-4 no-underline hover:border-green-600 hover:border-2 hover:border-solid">Full Story</a>
+      <p class="text-center pt-4">
+				<a href="{{ post.url | url }}" class="border-solid border-2 border-black text-center max-w-1/2 min-w-max px-6 py-2 no-underline hover:border-green-600 inline-block">Full Story</a>
       </p>
 		</article>
   {%- else -%}
