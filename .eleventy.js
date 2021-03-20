@@ -94,6 +94,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy({'./node_modules/alpinejs/dist/alpine.js': './static/js/alpine.js'})
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
