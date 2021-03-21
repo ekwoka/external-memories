@@ -36,19 +36,33 @@
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}"/>
+
+    <!-- Alpine Data -->
+    <script>
+      function alpineData() {
+        return {
+          introShow: true
+
+        }
+      };
+    </script>
   </head>
-  <body class="is-preload">
+  <body class="is-preload" x-data="alpineData()">
 
 		<!-- Wrapper -->
 		<div id="wrapper" class="fade-in">
 
       {%- if page.url == '/' %}
 			  <!-- Intro -->
-			  <div id="intro" class="px-8 pt-12 pb-4 text-white items-center flex flex-col justify-end relative cursor-default text-center min-h-screen md:px-16 md:pt-16 md:pb-8 lg:pt-32 lg:pb-36">
-			  	<h1>This is<br />
+			  <div 
+          id="" 
+          class="px-8 pt-12 pb-4 text-white items-center flex flex-col justify-end relative cursor-default text-center min-h-screen md:px-16 md:pt-16 md:pb-8 lg:pt-32 lg:pb-36"
+          x-show="introShow"
+          x-transition:enter="transition duration-1000 transform ease-linear"
+          x-transition:enter-start="opacity-0">
+			  	<h1 class="text-white text-6xl">This is<br />
 			  		External Memories</h1>
-			  	<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-			  		and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+			  	<p class="text-white">This is a blog or portfolio or thing. I don't know.</p>
 			  	<ul class="actions">
 			  		<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			  	</ul>
