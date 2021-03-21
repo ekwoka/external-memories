@@ -59,7 +59,7 @@
             x-show="introShow"
             x-transition:enter="transition duration-1000 transform ease-linear"
             x-transition:enter-start="opacity-0"
-            x-transition:leave="transition duration-1000 transform ease-linear"
+            x-transition:leave="transition duration-600 transform ease-linear"
             x-transition:leave-end="opacity-0">
 			    	<h1 class="text-white text-6xl text-center">This is<br />
               External Memories</h1>
@@ -74,9 +74,9 @@
           x-show="!introShow"
           x-transition:enter="transition duration-1000 transform ease-linear"
           x-transition:enter-start="opacity-0"
-          x-transition:leave="transition duration-1000 transform ease-linear"
+          x-transition:leave="transition duration-600 transform ease-linear"
           x-transition:leave-end="opacity-0"
-          {%- if page.url != '/' %}@click.prevent="introShow = !introShow"{%- endif -%}>
+          {%- if page.url == '/' %}@click.prevent="introShow = !introShow"{%- endif -%}>
 			  	<a href="index.html">{{ title or metadata.title }}</a>
 			  </header>
       </div>
@@ -100,7 +100,7 @@
 
 
       <!-- Main -->
-      {%- if page.url != '/' %}<div id="main-target" style="margin-top: -20vh;padding-top: 20vh;"></div>{%- endif -%}
+      {%- if page.url == '/' %}<div id="main-target" style="margin-top: -20vh;padding-top: 20vh;"></div>{%- endif -%}
 			<div class="bg-white relative max-w-6xl mx-auto my-0 clamp-main px-4 pt-6 pb-24 md:px-12" >
         {{ content | safe }}
       </div>
