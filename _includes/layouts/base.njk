@@ -70,9 +70,9 @@
 
 			  <!-- Header -->
 			  <header 
-          class="text-white h-64 pb-32 absolute bottom-0 text-center text-5xl left-1/2 -translate-x-1/2 transform"   x-show="!introShow"
+          class="text-white border-4 border-solid border-white absolute bottom-1/20 text-center text-4xl left-1/2 -translate-x-1/2 transform"   x-show="!introShow"
           @click.prevent="introShow = !introShow">
-			  	<a href="index.html" class="border-4 border-solid border-white py-4 px-8">{{ title or metadata.title }}</a>
+			  	<a href="index.html" class="py-4 px-8">{{ title or metadata.title }}</a>
 			  </header>
       </div>
 
