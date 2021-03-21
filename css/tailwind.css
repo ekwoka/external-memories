@@ -34,64 +34,64 @@ h3 {
 /*VH based Height*/
 
 .h-screen-1\/4 {
-  min-height: 25vh;
+  height: 25vh;
 }
 
 .h-screen-1\/2 {
-  min.height: 50vh;
+  height: 50vh;
 }
 
 .h-screen-3\/4 {
-  min.height: 75vh;
+  height: 75vh;
 }
 
 @media (min-width: 640px) {
   .sm\:h-screen-1\/4 {
-    min-height: 25vh;
+    height: 25vh;
   }
   
   .sm\:h-screen-1\/2 {
-    min.height: 50vh;
+    height: 50vh;
   }
   
   .sm\:h-screen-3\/4 {
-    min.height: 75vh;
+    height: 75vh;
   }
 }
 
 @media (min-width: 768px) {
   .md\:h-screen-1\/4 {
-    min-height: 25vh;
+    height: 25vh;
   }
   .md\:h-screen-1\/2 {
-    min.height: 50vh;
+    height: 50vh;
   }
   .md\:h-screen-3\/4 {
-    min.height: 75vh;
+    height: 75vh;
   }
 }
 
 @media (min-width: 1024px) {
   .lg\:h-screen-1\/4 {
-    min-height: 25vh;
+    height: 25vh;
   }
   .lg\:h-screen-1\/2 {
-    min.height: 50vh;
+    height: 50vh;
   }
   .lg\:h-screen-3\/4 {
-    min.height: 75vh;
+    height: 75vh;
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:h-screen-1\/4 {
-    min-height: 25vh;
+    height: 25vh;
   }
   .xl\:h-screen-1\/2 {
-    min.height: 50vh;
+    height: 50vh;
   }
   .xl\:h-screen-3\/4 {
-    min.height: 75vh;
+    height: 75vh;
   }
 }
 
