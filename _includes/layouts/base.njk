@@ -76,7 +76,7 @@
           x-transition:enter-start="opacity-0"
           x-transition:leave="transition duration-600 transform ease-linear"
           x-transition:leave-end="opacity-0"
-          {%- if page.url == '/' %}@click.prevent="introShow = !introShow"{%- endif -%}>
+          @click.prevent="{%- if page.url == '/' %}introShow = !introShow{%- endif -%}">
 			  	<a href="index.html">{{ title or metadata.title }}</a>
 			  </header>
       </div>
