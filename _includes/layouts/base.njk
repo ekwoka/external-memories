@@ -46,34 +46,36 @@
       };
     </script>
   </head>
-  <body class="is-preload bg-gray-800" x-data="alpineData()">
+  <body class="bg-gray-800" x-data="alpineData()">
 
 		<!-- Wrapper -->
 		<div>
+      <div class="{%- if page.url == '/' %}h-screen-3/4 | md:h-screen-1/2{%- else -%} h-screen-1/4{%- endif -%} relative">
+        {%- if page.url == '/' %}
+          <!-- Intro -->
+          <div 
+            id="" 
+            class="px-8 pt-12 pb-4 text-white items-center absolute bottom-0 text-center h-screen-3/4 | md:h-screen-1/2 md:px-16 md:pt-16 md:pb-8 lg:pt-32 lg:pb-36"
+            x-show="introShow"
+            x-transition:enter="transition duration-1000 transform ease-linear"
+            x-transition:enter-start="opacity-0">
+			    	<h1 class="text-white text-6xl">This is<br />
+              External Memories</h1>
+			    	<p class="text-white">This is a blog or portfolio or thing. I don't know.</p>
+			    	<ul class="actions">
+			    		<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			    	</ul>
+			    </div>
+        {%- endif -%}
 
-      {%- if page.url == '/' %}
-			  <!-- Intro -->
-			  <div 
-          id="" 
-          class="px-8 pt-12 pb-4 text-white items-center flex flex-col justify-end relative cursor-default text-center h-screen-3/4 | md:h-screen-1/2 md:px-16 md:pt-16 md:pb-8 lg:pt-32 lg:pb-36"
-          x-show="introShow"
-          x-transition:enter="transition duration-1000 transform ease-linear"
-          x-transition:enter-start="opacity-0">
-			  	<h1 class="text-white text-6xl">This is<br />
-			  		External Memories</h1>
-			  	<p class="text-white">This is a blog or portfolio or thing. I don't know.</p>
-			  	<ul class="actions">
-			  		<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-			  	</ul>
-			  </div>
-      {%- endif -%}
+			  <!-- Header -->
+			  <header 
+          class="text-white h-64 pb-32 absolute bottom-0 text-center text-5xl"   x-show="!introShow"
+          @click.prevent="introShow = !introShow">
+			  	<a href="index.html" class="border-4 border-solid border-white py-4 px-8">{{ title or metadata.title }}</a>
+			  </header>
+      </div>
 
-			<!-- Header -->
-			<header 
-        class="text-white items-center flex flex-col justify-end pointer-events-none select-none h-64 pb-32 relative text-center"   x-show="!introShow"
-        @click.prevent="introShow = !introShow">
-				<a href="index.html" class="border-4 border-solid border-white py-4 px-8">{{ title or metadata.title }}</a>
-			</header>
 
       <!-- Nav -->
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ -#}
