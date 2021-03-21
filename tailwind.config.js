@@ -12,6 +12,11 @@ module.exports = {
     },
     extend: {
       colors: {},
+      inset: {
+        '1/10': '10%',
+      },
+      width: {},
+      
     },
   },
   variants: {},
