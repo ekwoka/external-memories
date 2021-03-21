@@ -69,8 +69,10 @@
       {%- endif -%}
 
 			<!-- Header -->
-			<header class="text-white items-center flex flex-col justify-end pointer-events-none select-none h-64 pb-32 relative text-center" x-show="!introShow">
-				<a href="index.html" class="border-3 border-solid border-white" @click.prevent="introShow = !introShow">{{ title or metadata.title }}</a>
+			<header 
+        class="text-white items-center flex flex-col justify-end pointer-events-none select-none h-64 pb-32 relative text-center"   x-show="!introShow"
+        @click.prevent="introShow = !introShow">
+				<a href="index.html" class="border-3 border-solid border-white">{{ title or metadata.title }}</a>
 			</header>
 
       <!-- Nav -->
