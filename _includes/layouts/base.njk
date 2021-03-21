@@ -46,11 +46,11 @@
       };
     </script>
   </head>
-  <body class="bg-gray-800" x-data="alpineData()">
+  <body class="bg-gray-800" x-data="alpineData()" {%- if page.url != '/' %} x-init="introShow = !introShow"{%- endif -%}>
 
 		<!-- Wrapper -->
 		<div>
-      <div class="{%- if page.url == '/' %}h-screen-3/4 | md:h-screen-1/2{%- else -%}h-screen-1/4{%- endif %} relative">
+      <div class="{%- if page.url == '/' -%}h-screen-3/4 | md:h-screen-1/2{%- else -%}h-screen-1/4{%- endif %} relative">
         {%- if page.url == '/' %}
           <!-- Intro -->
           <div 
@@ -68,7 +68,7 @@
 
 			  <!-- Header -->
 			  <header
-          class="text-white border-4 border-solid border-white py-2 absolute bottom-1/20 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"   x-show="!introShow"
+          class="text-white border-4 border-solid border-white py-2 absolute bottom-1/10 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"   x-show="!introShow"
           @click.prevent="introShow = !introShow">
 			  	<a href="index.html">{{ title or metadata.title }}</a>
 			  </header>
