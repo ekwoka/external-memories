@@ -16,6 +16,10 @@ h3 {
   width: clamp(70vw, calc(13rem + 50vw), 98vw);
 }
 
+.clamp-logo {
+  width: clamp(50vw,calc(7rem + 50vw),95vw);
+}
+
 
 .text-hr::before, .text-hr::after {
   content: '';
