@@ -69,7 +69,7 @@
       {%- endif -%}
 
 			<!-- Header -->
-			<header id="header" class="text-white items-center flex flex-col justify-end pointer-events-none select-none h-64 pb-32 relative text-center">
+			<header id="header" class="text-white items-center flex flex-col justify-end pointer-events-none select-none h-64 pb-32 relative text-center" x-show="!introShow">
 				<a href="index.html" class="logo" @click.prevent="introShow = !introShow">{{ title or metadata.title }}</a>
 			</header>
 
