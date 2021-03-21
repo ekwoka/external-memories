@@ -58,7 +58,9 @@
             class="px-8 pt-12 pb-4 text-white absolute bottom-1/10 left-1/2 -translate-x-1/2 transform text-center"
             x-show="introShow"
             x-transition:enter="transition duration-1000 transform ease-linear"
-            x-transition:enter-start="opacity-0">
+            x-transition:enter-start="opacity-0"
+            x-transition:leave="transition duration-1000 transform ease-linear"
+            x-transition:leave-end="opacity-0">
 			    	<h1 class="text-white text-6xl text-center">This is<br />
               External Memories</h1>
 			    	<p class="text-white text-center">This is a blog or portfolio or thing. I don't know.</p>
@@ -68,7 +70,12 @@
 
 			  <!-- Header -->
 			  <header
-          class="text-white border-4 border-solid border-white py-2 absolute bottom-1/10 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"   x-show="!introShow"
+          class="text-white border-4 border-solid border-white py-2 absolute bottom-1/10 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"
+          x-show="!introShow"
+          x-transition:enter="transition duration-1000 transform ease-linear"
+          x-transition:enter-start="opacity-0"
+          x-transition:leave="transition duration-1000 transform ease-linear"
+          x-transition:leave-end="opacity-0">
           @click.prevent="introShow = !introShow">
 			  	<a href="index.html">{{ title or metadata.title }}</a>
 			  </header>
