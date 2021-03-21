@@ -3,7 +3,7 @@
     <!-- Featured Post -->
 		<article class="">
 			<header class="prose">
-				<span class="text-hr block relative text-center" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+				<span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
         <!-- Tags -->
         {%- if post.data.tags -%}
@@ -30,7 +30,7 @@
     {%- endif -%}
 		    <article>
 			  	<header>
-			  		<span class="text-hr block relative text-center" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+			  		<span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 			  		<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 			  	</header>
           <!-- Tags -->
