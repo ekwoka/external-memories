@@ -62,12 +62,12 @@
 			    	<h1 class="text-white text-6xl text-center">This is<br />
               External Memories</h1>
 			    	<p class="text-white text-center">This is a blog or portfolio or thing. I don't know.</p>
-            <a href="#header" class="" @click="introShow = !introShow">Scroll Down</a>
+            <a href="#main-target" class="" @click="introShow = !introShow">Scroll Down</a>
 			    </div>
         {%- endif -%}
 
 			  <!-- Header -->
-			  <header id="header"
+			  <header
           class="text-white border-4 border-solid border-white py-2 absolute bottom-1/20 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"   x-show="!introShow"
           @click.prevent="introShow = !introShow">
 			  	<a href="index.html">{{ title or metadata.title }}</a>
@@ -93,7 +93,7 @@
 
 
       <!-- Main -->
-			<div class="bg-white relative max-w-6xl mx-auto my-0 clamp-main px-4 pt-6 pb-24 md:px-12" >
+			<div id="main-target" class="bg-white relative max-w-6xl mx-auto my-0 clamp-main px-4 pt-6 pb-24 md:px-12" >
         {{ content | safe }}
       </div>
 
