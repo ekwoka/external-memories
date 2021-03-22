@@ -2,10 +2,9 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
-
+<div class="prose">
 {{ content | safe }}
-
+</div>
 <hr>
 <ul>
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
