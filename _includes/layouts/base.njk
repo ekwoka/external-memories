@@ -92,20 +92,11 @@
           @click.prevent="menuIsOpen = false">close X</button>
         <ul class="block text-gray-200 divide-y divide-gray-600 text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
-            <li class="block py-2{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
+            <li class="block pb-2 pt-4{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
               {%-if entry.url != page.url -%}<a href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
           {%- endfor %}
         </ul>
       </nav>
-      <div class="fixed w-screen h-screen right-0 opacity-90 top-0 bg-gray-800 z-10 | md:hidden"
-        x-show="menuIsOpen"
-        x-transition:enter="transition-opacity duration-1000 ease-out"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-90"
-        x-transition:leave="transition-opacity duration-1000 ease-in"
-        x-transition:leave-start="opacity-90"
-        x-transition:leave-end="opacity-0" style="display: none;">
-      </div>
 
 
       <!-- Main -->
