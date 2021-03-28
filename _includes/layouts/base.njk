@@ -78,18 +78,19 @@
         x-show="!menuIsOpen"
         x-transition:leave="transform transition-all duration-600 ease-out"
         x-transition:leave-end="opacity-0"
-        @click.prevent="menuIsOpen = !menuIsOpen">MENU</button>
+        @click.prevent="menuIsOpen = true">MENU</button>
 
-      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-10 px-8 pt-12" 
+      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-10 pl-8 pr-12 pt-12" 
         style="display: none;"
         x-show="menuIsOpen"
         x-transition:enter="transform transition-all duration-1000 ease-out"
         x-transition:enter-start="translate-x-full"
-        x-transition:leave="transform transition-all duration-600 ease-out"
-        x-transition:leave-end="translate-x-full">
-        <button class="absolute right-4 top-4"
-          @click.prevent="menuIsOpen = !menuIsOpen">close X</button>
-        <ul class="block text-gray-200 divide-y">
+        x-transition:leave="transform transition-all duration-800 ease-in"
+        x-transition:leave-end="translate-x-full"
+        @click.away="menuIsOpen = false">
+        <button class="absolute right-4 top-4 text-gray-200"
+          @click.prevent="menuIsOpen = false">close X</button>
+        <ul class="block text-gray-200 divide-y divide-gray-600">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
               {%-if entry.url != page.url -%}<a href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
