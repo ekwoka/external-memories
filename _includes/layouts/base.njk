@@ -21,14 +21,15 @@
       function alpineData() {
         return {
           introShow: {%- if page.url != '/' %}false{%- else -%}true{%- endif -%},
+          menuIsOpen: false,
         }
       };
     </script>
   </head>
-  <body class="bg-gray-800" x-data="alpineData()">
+  <body class="bg-gray-800 w-full" x-data="alpineData()">
 
 		<!-- Wrapper -->
-		<div>
+		<div class="mx-auto">
       <div class="{%- if page.url == '/' -%}h-screen-3/4 | md:h-screen-1/2{%- else -%}h-screen-1/4{%- endif %} relative">
         {%- if page.url == '/' %}
           <!-- Intro -->
@@ -70,13 +71,29 @@
               <a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
           {%- endfor %}
 				</ul>
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
 			</nav>
+
+      <!-- Mobile Navigation Drawer -->
+      <button class="fixed right-4 top-4 text-gray-100 bg-gray-900 md:hidden"
+        x-show="!menuIsOpen"
+        x-transition:leave="transform transition-all duration-600 ease-out"
+        x-transition:leave-end="opacity-0"
+        @click.prevent="menuIsOpen = !menuIsOpen">MENU</button>
+
+      <nav class="fixed h-screen right-0 w-5/6 bg-gray-700" 
+        style="display: none;"
+        x-show="menuIsOpen"
+        x-transition:enter="transform transition-all duration-1000 ease-out"
+        x-transition:enter-start="translate-x-full"
+        x-transition:leave="transform transition-all duration-600 ease-out"
+        x-transition:leave-end="translate-x-full">
+        <ul class="block text-gray-200">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li class="block{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
+              <a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
 
 
       <!-- Main -->
