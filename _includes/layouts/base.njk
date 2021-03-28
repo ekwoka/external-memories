@@ -97,9 +97,8 @@
           {%- endfor %}
         </ul>
       </nav>
-      <div class="fixed w-screen h-screen right-0 top-0 bg-gray-800 z-10 | md:hidden"
+      <div class="fixed w-screen h-screen right-0 opacity-90 top-0 bg-gray-800 z-10 | md:hidden"
         x-show="menuIsOpen"
-        :class="{ 'opacity-90': menuIsOpen }"
         x-transition:enter="transition-opacity duration-1000 ease-out"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-90"
