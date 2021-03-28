@@ -87,7 +87,7 @@
 			<nav id="" class="clamp-main text-white h-16 leading-16 bg-gray-600 flex mx-auto">
 				<ul class="flex font-bold tracking-wider">
           {%- for entry in collections.all | eleventyNavigation %}
-            <li class="block px-8{%- if entry.url == page.url %} text-black bg-white{%- endif -%}">
+            <li class="block px-8 {%- if entry.url == page.url %} text-gray-800 bg-white{%- else %}  hover:bg-gray-400 hover:text-gray-800{%- endif -%}">
               <a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
           {%- endfor %}
 				</ul>
