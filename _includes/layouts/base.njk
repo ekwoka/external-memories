@@ -92,7 +92,7 @@
         <ul class="block text-gray-200 divide-y">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
-              {%-unless entry.url == page.url -%}<a href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endunless -%}</li>
+              {%-if entry.url != page.url -%}<a href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
           {%- endfor %}
         </ul>
       </nav>
