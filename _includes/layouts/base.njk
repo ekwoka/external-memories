@@ -20,12 +20,12 @@
     <script>
       function alpineData() {
         return {
-          introShow: true
+          introShow: {%- if page.url != '/' %}false{%- else -%}true{%- endif -%},
         }
       };
     </script>
   </head>
-  <body class="bg-gray-800" x-data="alpineData()" {%- if page.url != '/' %} x-init="introShow = !introShow"{%- endif -%}>
+  <body class="bg-gray-800" x-data="alpineData()">
 
 		<!-- Wrapper -->
 		<div>
@@ -39,11 +39,12 @@
             x-transition:enter="transition duration-1000 transform ease-linear"
             x-transition:enter-start="opacity-0"
             x-transition:leave="transition duration-600 transform ease-linear"
-            x-transition:leave-end="opacity-0">
+            x-transition:leave-end="opacity-0"
+            @scroll.window="introShow = (window.pageYOffset > 40) ? false : true">
 			    	<h1 class="text-white text-6xl text-center">This is<br />
               External Memories</h1>
 			    	<p class="text-white text-center">This is a blog or portfolio or thing. I don't know.</p>
-            <a href="#main-target" class="" @click="introShow = !introShow">Scroll Down</a>
+            <a href="#main-target" class="">Scroll Down</a>
 			    </div>
         {%- endif -%}
 
@@ -54,8 +55,7 @@
           x-transition:enter="transition duration-1000 transform ease-linear"
           x-transition:enter-start="opacity-0"
           x-transition:leave="transition duration-600 transform ease-linear"
-          x-transition:leave-end="opacity-0"
-          @click.prevent="{%- if page.url == '/' %}introShow = !introShow{%- endif -%}">
+          x-transition:leave-end="opacity-0">
 			  	<a href="index.html">{{ title or metadata.title }}</a>
 			  </header>
       </div>
