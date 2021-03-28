@@ -85,9 +85,9 @@
       <!-- Nav -->
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ -#}
 			<nav id="" class="clamp-main text-white h-16 leading-16 bg-gray-600 flex mx-auto">
-				<ul class="font-bold tracking-wider">
+				<ul class="flex font-bold tracking-wider">
           {%- for entry in collections.all | eleventyNavigation %}
-            <li class="block pl-0 px-8{%- if entry.url == page.url %} text-black bg-white{%- endif -%}">
+            <li class="block px-8{%- if entry.url == page.url %} text-black bg-white{%- endif -%}">
               <a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
           {%- endfor %}
 				</ul>
