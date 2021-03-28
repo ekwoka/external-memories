@@ -80,13 +80,15 @@
         x-transition:leave-end="opacity-0"
         @click.prevent="menuIsOpen = !menuIsOpen">MENU</button>
 
-      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-10 px-8" 
+      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-10 px-8 pt-12" 
         style="display: none;"
         x-show="menuIsOpen"
         x-transition:enter="transform transition-all duration-1000 ease-out"
         x-transition:enter-start="translate-x-full"
         x-transition:leave="transform transition-all duration-600 ease-out"
         x-transition:leave-end="translate-x-full">
+        <button class="absolute right-4 top-4"
+          @click.prevent="menuIsOpen = !menuIsOpen">close X</button>
         <ul class="block text-gray-200 divide-y">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block{%- if entry.url == page.url %} font-bold{%- else %}{%- endif -%}">
