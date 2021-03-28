@@ -80,7 +80,7 @@
         x-transition:leave-end="opacity-0"
         @click.prevent="menuIsOpen = true">MENU</button>
 
-      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-10 pl-8 pr-12 pt-12" 
+      <nav class="fixed h-screen top-0 right-0 w-5/6 bg-gray-700 z-20 pl-8 pr-12 pt-12 | md:hidden" 
         style="display: none;"
         x-show="menuIsOpen"
         x-transition:enter="transform transition-all duration-1000 ease-out"
@@ -97,6 +97,13 @@
           {%- endfor %}
         </ul>
       </nav>
+      <div class="fixed w-screen h-screen bg-gray-800 opacity-25 z-10 | md:hidden"
+        x-show="menuIsOpen"
+        x-transition:enter="transition-all duration-600 ease-out"
+        x-transition:enter-start="opacity-0"
+        x-transition:leave="transition-all duration-600 ease-in"
+        x-transitiond:leave-end="opacity-0" style="display: none;">
+      </div>
 
 
       <!-- Main -->
