@@ -3,7 +3,7 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 <div class="mx-auto">
-  <span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+  <span class="text-hr block relative text-center font-serif" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</span>
   {{ content | safe }}
 </div>
 <hr>
