@@ -1,3 +1,5 @@
+const { height } = require("tailwindcss/defaultTheme")
+
 module.exports = {
   purge: {
     mode: "all",
@@ -17,6 +19,10 @@ module.exports = {
         '1/20': '5%',
       },
       width: {},
+      lineHeight: {
+        '12': '3rem',
+        '16': '4rem',
+      }
 
     },
   },
