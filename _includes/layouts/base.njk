@@ -90,7 +90,7 @@
         @click.away="menuIsOpen = false">
         <button class="absolute right-4 top-4 text-gray-200"
           @click.prevent="menuIsOpen = false">close X</button>
-        <ul class="block text-gray-200 divide-y divide-gray-600 text-lg">
+        <ul class="block w-full text-gray-200 divide-y divide-gray-600 text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block pb-2 pt-4{%- if entry.url == page.url %} font-bold uppercase{%- else %}{%- endif -%}">
               {%-if entry.url != page.url -%}<a href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
