@@ -74,7 +74,7 @@
 			</nav>
 
       <!-- Mobile Navigation Drawer -->
-      <button class="fixed right-4 top-4 text-gray-100 bg-gray-800 py-2 px-4 z-10 shadow-lg md:hidden"
+      <button class="fixed right-4 top-4 text-gray-100 bg-gray-800 py-2 px-4 z-10 rounded-sm shadow-lg md:hidden"
         x-show="!menuIsOpen"
         x-transition:leave="transform transition-all duration-600 ease-out"
         x-transition:leave-end="opacity-0"
@@ -93,7 +93,7 @@
         <ul class="block w-full text-gray-200 divide-y divide-gray-600 text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block pb-2 pt-4{%- if entry.url == page.url %} font-bold uppercase{%- else %}{%- endif -%}">
-              {%-if entry.url != page.url -%}<a class="w-full h-full href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
+              {%-if entry.url != page.url -%}<a class="w-full h-full" href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
           {%- endfor %}
         </ul>
       </nav>
