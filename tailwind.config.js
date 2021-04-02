@@ -1,4 +1,5 @@
-const { height, colors } = require("tailwindcss/defaultTheme")
+const height = require("tailwindcss/defaultTheme")
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
