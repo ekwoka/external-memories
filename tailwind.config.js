@@ -1,4 +1,4 @@
-const { height } = require("tailwindcss/defaultTheme")
+const { height, colors } = require("tailwindcss/defaultTheme")
 
 module.exports = {
   purge: {
@@ -8,12 +8,15 @@ module.exports = {
       whitelist: [],
     },
   },
+  darkMode: 'media',
   theme: {
     container: {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        truegray: colors.trueGray,
+      },
       inset: {
         '1/10': '10%',
         '1/20': '5%',
