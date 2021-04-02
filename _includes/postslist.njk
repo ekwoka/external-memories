@@ -26,7 +26,7 @@
   {%- else -%}
     {%- if loop.index == 2 -%}
       <!-- Posts -->
-		  <section class="posts">
+		  <section class="w-full grid grid-cols-1 md:grid-cols-2 divide-x divide-y">
     {%- endif -%}
 		    <article class="mx-auto">
 			  	<header>
@@ -46,9 +46,7 @@
           {%- endif -%}
 			  	{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image fit"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}" /></a>{%- endif -%}
 			  	<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
-			  	<ul class="actions special">
-			  		<li><a href="{{ post.url | url }}" class="button">Full Story</a></li>
-			  	</ul>
+          <a href="{{ post.url | url }}" class="text-center  min-w-max px-6 py-2 no-underline hover:border-green-600 block font-bold text-lg tracking-widest">Full Story</a>
 			  </article>
     {%- if loop.last -%}
       </section>
