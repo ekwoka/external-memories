@@ -3,9 +3,9 @@ title: Building a Shopify Theme on AlpineJS and TailwindCSS
 description: Loads of quick getting started guides exist for AlpineJS, but little resources exist showing off a more complete application of the code.
 date: 2021-03-20
 tags:
-  - Shopify
-  - AlpineJS
-  - TailwindCSS
+  - shopify
+  - alpinejs
+  - tailwindcss
 layout: layouts/post.njk
 ---
 At this time of writing, my Spring of Creation is just beginning, and one of the creations I want to pursue for the next 93 days is making my own Shopify Theme.

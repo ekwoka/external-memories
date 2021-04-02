@@ -4,7 +4,7 @@ description: A bright new future looks of powerful and responsive Shopify stores
 date: 2021-03-16
 tags:
   - shopify
-  - Alpinejs
+  - alpinejs
   - tailwindcss
 layout: layouts/post.njk
 ---
