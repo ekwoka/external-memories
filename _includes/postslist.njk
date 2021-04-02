@@ -20,7 +20,7 @@
 			</header>
 			{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image main"><img src="{{ post.data.banner }}" alt="{{ post.data.title }}"/></a>{%- endif -%}
       <p class="text-center pt-4">
-				<a href="{{ post.url | url }}" class="text-center min-w-max px-6 py-2 no-underline hover:text-transparent hover:bg-gray-800 block font-bold text-lg tracking-widest | md:border-solid md:border-black md:inline-block md:border-2 md:max-w-1/2">Full Story</a>
+				<a href="{{ post.url | url }}" class="text-center min-w-max px-6 py-2 no-underline hover:text-white hover:bg-gray-800 block font-bold text-lg tracking-widest | md:border-solid md:border-black md:inline-block md:border-2 md:max-w-1/2">Full Story</a>
       </p>
 		</article>
   {%- else -%}
@@ -31,7 +31,7 @@
 		    <article class="mx-auto">
 			  	<header>
 			  		<span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
-			  		<h2 class="mt-4"><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+			  		<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 			  	</header>
           <!-- Tags -->
           {%- if post.data.tags -%}
