@@ -18,6 +18,13 @@ module.exports = {
       colors: {
         truegray: colors.trueGray,
       },
+      margin: {
+        '-16': '-2rem',
+        '-32': '-4rem',
+        '-48': '-6rem',
+        '-64': '-8rem',
+        '-80': '-10rem',
+        '-96': '-12rem',
       inset: {
         '1/10': '10%',
         '1/20': '5%',
@@ -28,7 +35,6 @@ module.exports = {
         '16': '4rem',
       },
       letterSpacing: ['dark']
-
     },
   },
   variants: {},
