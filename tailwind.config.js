@@ -36,6 +36,11 @@ module.exports = {
         '1/10': '10%',
         '1/20': '5%',
       },
+      height: {
+        'screen-1/2': '50vh',
+        'screen-1/4': '25vh',
+        'screen-3/4': '75vh',
+      },
       width: {},
       lineHeight: {
         '12': '3rem',
