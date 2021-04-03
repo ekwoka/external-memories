@@ -187,6 +187,8 @@ fetchProducts() {
 
 This is out main fetching function to collect more product information.
 
+Of course, it's important to know that the fetch request is towards our custom collection.json template on Shopify that we discussed before, not a default Shopify API.
+
 I used two variables for controlling the next page to load so that this could be easily adapted to both load forwards and backwards (for example, if a user clicked on a later product, and we want that product to load quickly when returning to the collection page) to fill up the information.
 
 So for moving forward or backwards, we could set the current page to next or previous before running the fetch. This would allow us to easily keep track of which additional products should be loaded in either direction.
