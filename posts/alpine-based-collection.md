@@ -2,7 +2,7 @@
 title: Putting Together a Collection Page with AlpineJS
 description: Tossing a headless collections page together with alpineJS is surprisingly easy for a dummy like me.
 banner: /img/alpine-based-collection.png
-date: 2021-04-08
+date: 2021-04-03
 tags:
   - shopify
   - alpinejs
