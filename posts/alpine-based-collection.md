@@ -28,15 +28,15 @@ There are obviously some important bits for the layout of a collections page. In
 Easy enough right?
 
 ```html
-<div class="h-full bg-white text-black p-4 pb-24" 
+<div class="h-full p-4 pb-24 text-black bg-white" 
 	 x-data="productList()" 
 	 x-init="fetchProducts()">
-	<div class="w-max mx-auto">
+	<div class="mx-auto w-max">
 		<div class="text-xl" 
 			 x-text="title"></div>
-		<div class="text-gray-500 text-sm" 
+		<div class="text-sm text-gray-500" 
 			 x-text="intro"></div>
-		<div class="text-gray-500 text-sm">
+		<div class="text-sm text-gray-500">
 			<span x-text="srcMessage">Searching Through:</span>
 			<span x-text="displayProducts.length"></span>
 			of 
@@ -49,16 +49,16 @@ Easy enough right?
 	
 		<template x-for="product in displayProducts" 
 				  :key="product.id">
-			<div class="bg-white w-full h-min rounded-xl card text-grey-darkest" 
+			<div class="w-full bg-white h-min rounded-xl card text-grey-darkest" 
 				 x-transition:enter="transition duration-1000 transform ease-linear" 
 				 x-transition:enter-start="opacity-0" 
 				 x-show="show" 
 				 :id="`listItem-${product.id}`">
 				<img :id="`image-${product.id}`" 
-					 class="w-full pt-0 px-0 mb-4 rounded-t-xl lazyload" 
+					 class="w-full px-0 pt-0 mb-4 rounded-t-xl lazyload" 
 					 src="loader.gif" 
 					 x-bind:data-srcset="product.image"/>
-				<div class="text-base text-gray-700 text-center font-bold my-4 w-full" 
+				<div class="w-full my-4 text-base font-bold text-center text-gray-700" 
 					 x-text="product.title"></div>
 				<div class="w-full px-4 mb-4 text-2xl text-center text-green-700" 
 					 x-text="product.price"></div>
@@ -67,9 +67,9 @@ Easy enough right?
 
 	</div>
 
-	<div class="w-max mx-auto" 
+	<div class="mx-auto w-max" 
 		 x-show="showLoadMore">
-		<button class="mx-auto px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 mt-8" 
+		<button class="px-5 py-3 mx-auto mt-8 text-base font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700" 
 				@click="extendList()" 
 				x-text="buttonText">Loading...</button>
 	</div>
@@ -81,7 +81,7 @@ Of course, this doesn't include any of the functions for actually pulling the in
 
 Something like this after being loaded with products:
 
-<img src="/img/alpine-based-collection-1.png" class="mx-auto w-full max-w-md"/>
+<img src="/img/alpine-based-collection-1.png" class="w-full max-w-md mx-auto"/>
 
 Then after the list, we provide a button to show more products, as we don't simply want an endless list right out of the gate. 
 
