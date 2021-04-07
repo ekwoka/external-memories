@@ -3,7 +3,7 @@
     <!-- Featured Post -->
 		<article class="mx-auto">
 			<header class="">
-				<span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+				<span class="relative block font-serif text-center text-hr" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 				<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
         <!-- Tags -->
         {%- if post.data.tags -%}
@@ -19,18 +19,18 @@
 				<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
 			</header>
 			{%- if post.data.banner -%}<a href="{{ post.url | url }}"><img class="w-full" src="{{ post.data.banner }}" alt="{{ post.data.title }}"/></a>{%- endif -%}
-      <p class="text-center pt-4">
+      <p class="pt-4 text-center">
 				<a href="{{ post.url | url }}" class="text-center min-w-max px-6 py-2 no-underline hover:text-white hover:bg-gray-800 block font-bold text-lg tracking-widest | md:border-solid md:border-black md:inline-block md:border-2 md:max-w-1/2">Full Story</a>
       </p>
 		</article>
   {%- else -%}
     {%- if loop.index == 2 -%}
       <!-- Posts -->
-		  <section class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-8 mt-8">
+		  <section class="grid w-full grid-cols-1 mt-8 md:grid-cols-2 gap-x-8">
     {%- endif -%}
 		    <article class="mx-auto">
 			  	<header>
-			  		<span class="text-hr block relative text-center font-serif" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
+			  		<span class="relative block font-serif text-center text-hr" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</span>
 			  		<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 			  	</header>
           <!-- Tags -->
@@ -46,7 +46,7 @@
           {%- endif -%}
 			  	{%- if post.data.banner -%}<a href="{{ post.url | url }}" class="image fit"><img class="w-full" src="{{ post.data.banner }}" alt="{{ post.data.title }}" /></a>{%- endif -%}
 			  	<p>{%- if post.data.description -%}{{ post.data.description }}{%- endif -%}</p>
-          <a href="{{ post.url | url }}" class="text-center  min-w-max px-6 py-2 no-underline hover:border-green-600 block font-bold text-lg tracking-widest">Full Story</a>
+          <a href="{{ post.url | url }}" class="block px-6 py-2 text-lg font-bold tracking-widest text-center no-underline min-w-max hover:border-green-600">Full Story</a>
 			  </article>
     {%- if loop.last -%}
       </section>

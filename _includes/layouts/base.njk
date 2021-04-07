@@ -26,7 +26,7 @@
       };
     </script>
   </head>
-  <body class="bg-gray-800 w-full" x-data="alpineData()">
+  <body class="w-full bg-gray-800" x-data="alpineData()">
 
 		<!-- Wrapper -->
 		<div class="mx-auto">
@@ -35,23 +35,23 @@
           <!-- Intro -->
           <div 
             id="" 
-            class="px-8 pt-12 pb-4 text-white absolute bottom-1/10 left-1/2 -translate-x-1/2 transform text-center"
+            class="absolute px-8 pt-12 pb-4 text-center text-white transform -translate-x-1/2 bottom-1/10 left-1/2"
             x-show="introShow"
             x-transition:enter="transition duration-1000 transform ease-linear"
             x-transition:enter-start="opacity-0"
             x-transition:leave="transition duration-600 transform ease-linear"
             x-transition:leave-end="opacity-0"
             @scroll.window="introShow = (window.pageYOffset > 250) ? false : true">
-			    	<h1 class="text-white text-6xl text-center">This is<br />
+			    	<h1 class="text-6xl text-center text-white">This is<br />
               External Memories</h1>
-			    	<p class="text-white text-center">This is a blog or portfolio or thing. I don't know.</p>
+			    	<p class="text-center text-white">This is a blog or portfolio or thing. I don't know.</p>
             <a href="#main-target" class="">Scroll Down</a>
 			    </div>
         {%- endif -%}
 
 			  <!-- Header -->
 			  <header
-          class="text-white border-4 border-solid border-white py-2 absolute bottom-1/10 text-center text-3xl left-1/2 -translate-x-1/2 transform clamp-logo"
+          class="absolute py-2 text-3xl text-center text-white transform -translate-x-1/2 border-4 border-white border-solid bottom-1/10 left-1/2 clamp-logo"
           x-show="!introShow"
           x-transition:enter="transition duration-1000 transform ease-linear"
           x-transition:enter-start="opacity-0"
@@ -74,13 +74,13 @@
 			</nav>
 
       <!-- Mobile Navigation Drawer -->
-      <button class="fixed right-4 top-4 text-gray-100 bg-gray-800 py-2 px-4 z-10 rounded-md shadow-lg tracking-wider md:hidden"
+      <button class="fixed z-10 px-4 py-2 tracking-wider text-gray-100 bg-gray-800 rounded-md shadow-lg right-4 top-4 md:hidden"
         x-show="!menuIsOpen"
         x-transition:leave="transform transition-all duration-600 ease-out"
         x-transition:leave-end="opacity-0"
         @click.prevent="menuIsOpen = true">MENU</button>
 
-      <nav class="fixed flex items-center h-screen top-0 right-0 w-5/6 bg-gray-700 z-20 pl-8 pr-12 pt-12 tracking-wider | md:hidden" 
+      <nav class="fixed top-0 right-0 z-20 flex items-center w-5/6 h-screen pt-12 pl-8 pr-12 tracking-wider bg-gray-700 md:hidden" 
         style="display: none;"
         x-show="menuIsOpen"
         x-transition:enter="transform transition-all duration-1000 ease-out"
@@ -88,9 +88,9 @@
         x-transition:leave="transform transition-all duration-800 ease-in"
         x-transition:leave-end="translate-x-full"
         @click.away="menuIsOpen = false">
-        <button class="absolute right-4 top-4 text-gray-200"
+        <button class="absolute text-gray-200 right-4 top-4"
           @click.prevent="menuIsOpen = false">close X</button>
-        <ul class="block w-full text-gray-200 divide-y divide-gray-600 text-lg">
+        <ul class="block w-full text-lg text-gray-200 divide-y divide-gray-600">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="block pb-2 pt-4{%- if entry.url == page.url %} font-bold uppercase{%- else %}{%- endif -%}">
               {%-if entry.url != page.url -%}<a class="inline-block w-full h-full" href="{{ entry.url | url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}</li>
@@ -100,13 +100,13 @@
 
 
       <!-- Main -->
-      {%- if page.url == '/' %}<div id="main-target" class="-mt-20h pt-20h | md:-mt-24h md:pt-24h"></div>{%- endif -%}
-			<div class="bg-white relative max-w-6xl mx-auto my-0 clamp-main px-4 pt-6 pb-24 md:px-12 prose">
+      {%- if page.url == '/' %}<div id="main-target" class="-mt-20h pt-20h md:-mt-24h md:pt-24h"></div>{%- endif -%}
+			<div class="relative max-w-6xl px-4 pt-6 pb-24 mx-auto my-0 prose bg-white clamp-main md:px-12">
         {{ content | safe }}
       </div>
 
 
-      <footer class="clamp-main bg-gray-800 h-24 mb-8"></footer>
+      <footer class="h-24 mb-8 bg-gray-800 clamp-main"></footer>
 
       <!-- Current page: {{ page.url | url }} -->
     </div>
