@@ -237,4 +237,4 @@ I feel having this split into 2 separate arrays based on your master product arr
 
 My logic there could be off, but I feel keeping those actions separate in the functions is more maintainable and useful than smashing them together.
 
-<img class="mx-auto max-w-md w-full" src="/img/shopify-header-schema.png"/>
+<img class="mx-auto max-w-md w-full rounded shadow-lg" src="/img/shopify-header-schema.png"/>
