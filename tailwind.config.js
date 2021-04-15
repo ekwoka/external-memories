@@ -5,7 +5,7 @@ module.exports = {
   mode: 'jit',
   purge: {
     mode: "all",
-    content: ["./**/*.njk"],
+    content: ["./**/*.njk","./**/*.md"],
     options: {
       whitelist: [],
     },
