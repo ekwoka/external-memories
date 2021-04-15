@@ -2,6 +2,7 @@ const height = require("tailwindcss/defaultTheme")
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  important: false,
   mode: 'jit',
   purge: {
     mode: "all",
