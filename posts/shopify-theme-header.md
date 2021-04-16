@@ -49,9 +49,4 @@ Schema:
 <img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-schema.png"/>
 
 Inline CSS at start of section:
-<div x-data="img()">
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-sticky.png" @click="show-code-3 = true"/>
-	<div class="overflow-hidden; max-w-md w-full rounded-lg shadow-lg bg-gray-700 text-gray-100" x-show="show-code-3" style="display:none;" x-text="code-3"></div>
-</div>
-
-<script>function img() {return {img: num,code-3: '{% if section.settings.sticky == true -%}.header-sticky {position: sticky;top: 0;z-index:15;}{% endif %}',show-code-3: false}}</script>
+<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-sticky.png"/>
