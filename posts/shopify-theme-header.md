@@ -54,21 +54,4 @@ Inline CSS at start of section:
 	<div class="overflow-hidden; max-w-md w-full rounded-lg shadow-lg bg-gray-700 text-gray-100" x-show="show-code-3" style="display:none;" x-text="code-3"></div>
 </div>
 
-<script>
-	function img() {
-		return {
-			img: num,
-			
-			code-3: '{% if section.settings.sticky == true -%}
-
-.header-sticky {
-	position: sticky;
-	top: 0;
-	z-index:15;
-}
-
-{% endif %}',
-			show-code-3: false
-}
-	}
-</script>
+<script>function img() {return {img: num,code-3: '{% if section.settings.sticky == true -%}.header-sticky {position: sticky;top: 0;z-index:15;}{% endif %}',show-code-3: false}}</script>
