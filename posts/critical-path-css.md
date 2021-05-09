@@ -1,7 +1,7 @@
 ---
 title: Unclogging the Critical Render Path
 description: "Small changes made to how things load can have a significant impact on pagespeed performance. In this, we'll be taking a look at Critical CSS"
-date: 2021-04-10
+date: 2021-05-10
 banner: /img/critical-header.png
 tags:
   - CSS
