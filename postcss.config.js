@@ -4,9 +4,9 @@ module.exports = {
     require(`autoprefixer`),
     ...(process.env.NODE_ENV === "production"
       ? [
-          require(`cssnano`)({
+          /* require(`cssnano`)({
             preset: "default",
-          }),
+          }), */
         ]
       : []),
   ],

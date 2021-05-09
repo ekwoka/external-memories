@@ -6,8 +6,8 @@
     "start": "npm-run-all --parallel css eleventy",
     "eleventy": "eleventy --serve",
     "debug": "set DEBUG=* & eleventy",
-    "css": "postcss css/tailwind.css --o _tmp/css/style.css",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production TAILWIND_MODE=build postcss css/tailwind.css --o _site/css/style.css --verbose"
+    "css": "NODE_ENV=production TAILWIND_MODE=build postcss css/tailwind.pre.css  --o static/css/style.css --verbose",
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production TAILWIND_MODE=build postcss css/tailwind.pre.css --o _site/css/style.css --verbose"
   },
   "repository": {
     "type": "git",

@@ -2,18 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Your Custom CSS Goes here*/
-
 html {
   scroll-behavior: smooth;
 }
 
 h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  @apply mb-3 text-4xl tracking-tighter text-center lg:text-7xl;
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply mb-3 text-2xl font-bold;
 }
 
 .clamp-main {
@@ -27,7 +25,7 @@ h3 {
 .text-hr::before, .text-hr::after {
   content: '';
   width: calc(50%-6rem);
-  @apply border-t-2 border-gray-200 absolute top-1/2;
+  @apply absolute border-t-2 border-gray-200 top-1/2;
 }
 
 .text-hr::before {
@@ -37,8 +35,6 @@ h3 {
 .text-hr::after {
   @apply right-0;
 }
-
-/* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
