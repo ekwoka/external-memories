@@ -24,7 +24,7 @@ But, often times, most of that CSS is not related to the most pressing aspects o
 
 One of the best ways to tackle this is to inline critical CSS (those styles necessary for getting some content onto the page) directly into the main documents markup. Then, if you defer the loading of the full stylesheets through various means, you can get the browser to start rendering the markup quickly, providing the user with some indication that the page is loading, and then finish the page once the Stylesheets finish loading.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/critical-header.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/critical-header.png"/>
 
 You can see in this image the difference between the conventional render blocking CSS, and with the critical CSS inlined and stylesheets deferred. 
 
@@ -39,7 +39,7 @@ Inherently, stylesheets indicated with `link` elements are render blocking, as m
 
 This can be done rather simply:
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/stylesheet-defer.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/stylesheet-defer.png"/>
 
 ### Why does this work?
 This is simple. There are many different media types, in this case print, that stylesheets can apply to. When the current views media type matches to the media attribute in the `link` element, then the browser applies the stylesheet. 
@@ -52,7 +52,7 @@ Easy, right?
 
 Let's see where that gets us.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/flash-unstyled.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/flash-unstyled.png"/>
 
 YIKES! That is pretty hideous.
 
@@ -71,7 +71,7 @@ Then, in this file you gather up all the CSS used for that initial page load, sp
 
 How I choose to handle the gathering of this CSS is fairly simple and straightforward. I use TailwindCSS as my CSS framework, so I simply use that to generate a minified critical render CSS and toss it into that extra snippet as I mentioned before.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/critical-scripts.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/critical-scripts.png"/>
 
 This is how the `package.json` might look for this. Naturally, TailwindCSS is required, and PostCSS. Cssnano is used to minify the critical CSS to keep it small for that initial download.
 
@@ -81,7 +81,7 @@ How you might do this with your own development environment is up to you. I woul
 
 Okay, so now that that is done, where does that leave us, visually speaking.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/inline-critical.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/inline-critical.png"/>
 
 Okay, we're getting there. It's mostly ugly as hell.
 
@@ -94,7 +94,7 @@ Of course, the exact way you may choose to do this could vary by how your site i
 
 But the core of it is that you include CSS in the critical CSS that hides those non-critical elements, and then you include, in the downloaded CSS file, CSS that makes those elements visible.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/hide-noncritical.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/hide-noncritical.png"/>
 
 With this, specifically, you can indicate to items that are not included in the critical CSS to hide with the `critical-hidden` class.
 
@@ -110,12 +110,12 @@ When the CSS finally loads, these are set to being visible and the content comes
 
 So, we implement these changes and what is the result?
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/full-critical.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/full-critical.png"/>
 
 Now that's looking pretty good!!
 
 Let's look back and compare all these different steps in the path to some nice Critical CSS Render Pathing:
 
-<video class="w-full max-w-md mx-auto rounded-lg shadow-lg"  id="player" controls="" muted="" preload="auto" poster="https://www.webpagetest.org/video/poster.php?tests=210509_BiDcMF_565f182391c1c3ce39f7ed33c6343f8f,210509_AiDc5C_a5a1b20dfceca556917704c03ab66ee6,210509_AiDcSM_f91454c46776c48fc32305dc935bef9e,210509_BiDcGX_698369494c4a8029ea61efbe1abdc50f&amp;bg=000000&amp;text=ffffff&amp;end=visual&amp;slow=1"><source src="https://www.webpagetest.org/video/video.php?tests=210509_BiDcMF_565f182391c1c3ce39f7ed33c6343f8f,210509_AiDc5C_a5a1b20dfceca556917704c03ab66ee6,210509_AiDcSM_f91454c46776c48fc32305dc935bef9e,210509_BiDcGX_698369494c4a8029ea61efbe1abdc50f&amp;bg=000000&amp;text=ffffff&amp;end=visual&amp;slow=1" type="video/mp4"></video>
+<video class="w-full max-w-xl mx-auto rounded-lg shadow-lg"  id="player" controls="" muted="" preload="auto" poster="https://www.webpagetest.org/video/poster.php?tests=210509_BiDcMF_565f182391c1c3ce39f7ed33c6343f8f,210509_AiDc5C_a5a1b20dfceca556917704c03ab66ee6,210509_AiDcSM_f91454c46776c48fc32305dc935bef9e,210509_BiDcGX_698369494c4a8029ea61efbe1abdc50f&amp;bg=000000&amp;text=ffffff&amp;end=visual&amp;slow=1"><source src="https://www.webpagetest.org/video/video.php?tests=210509_BiDcMF_565f182391c1c3ce39f7ed33c6343f8f,210509_AiDc5C_a5a1b20dfceca556917704c03ab66ee6,210509_AiDcSM_f91454c46776c48fc32305dc935bef9e,210509_BiDcGX_698369494c4a8029ea61efbe1abdc50f&amp;bg=000000&amp;text=ffffff&amp;end=visual&amp;slow=1" type="video/mp4"></video>
 
 Snappy and looking good!!

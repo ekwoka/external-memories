@@ -26,13 +26,13 @@ A logo is rather important to a website of any kind, and many store owners will 
 
 So I settled on an image option (with image picker), and SVG option (with html entry box) and Text (just the store name in normal text).
 
-<img src="/img/shopify-header-3" class="w-full max-w-md mx-auto"/>
+<img src="/img/shopify-header-3.png" class="w-full max-w-xs mx-auto rounded-lg shadow-lg"/>
 
 Naturally, none of these behave similarly, and providing a further option for customizing the presented width of the logo in question adds additional issues.
 
 I settled on using some inline CSS at the beginning of the header section to defined some shared width and height data for the image logo (if selected) to keep it from getting squashed or running amok outside of it's designated place.
 
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-img.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/shopify-header-img.png"/>
 
 By comparison, the text and SVG versions were entirely straight forward.
 
@@ -46,7 +46,7 @@ With Shopify sections, these are dynamically generated `div` elements, so we can
 What I came up with was to instead use the section schema to apply a class to the section, and then conditionally define that class as being sticky at the beginning of the section.
 
 Schema:
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-schema.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/shopify-header-schema.png"/>
 
 Inline CSS at start of section:
-<img class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="/img/shopify-header-sticky.png"/>
+<img class="w-full max-w-xl mx-auto rounded-lg shadow-lg" src="/img/shopify-header-sticky.png"/>

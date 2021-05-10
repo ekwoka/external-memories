@@ -81,7 +81,7 @@ Of course, this doesn't include any of the functions for actually pulling the in
 
 Something like this after being loaded with products:
 
-<img src="/img/alpine-based-collection-1.png" class="w-full max-w-md mx-auto"/>
+<img src="/img/alpine-based-collection-1.png" class="w-full max-w-xl mx-auto rounded-lg shadow-lg"/>
 
 Then after the list, we provide a button to show more products, as we don't simply want an endless list right out of the gate. 
 
