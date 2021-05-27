@@ -24,22 +24,22 @@
   },
   "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
   "dependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.2.6",
     "lazysizes": "^5.3.2",
-    "postcss": "^8.2.15"
+    "postcss": "^8.3.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-navigation": "^0.2.0",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
-    "@tailwindcss/typography": "^0.4.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@tailwindcss/typography": "^0.4.1",
     "@tomleesm/markdown-it-wikilinks": "^1.1.1",
     "alpinejs": "^2.8.2",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.0.2",
+    "cssnano": "^5.0.4",
     "eleventy-plugin-respimg": "^0.1.2",
-    "luxon": "^1.26.0",
+    "luxon": "^1.27.0",
     "markdown-it": "^12.0.6",
     "markdown-it-anchor": "^7.1.0",
     "npm-run-all": "^4.1.5",
